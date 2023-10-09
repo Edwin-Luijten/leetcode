@@ -18,7 +18,7 @@ var tests []TestCase = []TestCase{
 
 var benchmark = TestCase{nums1: []int{1, 3}, nums2: []int{2}, expected: 2}
 
-func TestLongestSubstringWithoutRepeatingCharacters(t *testing.T) {
+func TestFindMedianSortedArrays(t *testing.T) {
 	for _, test := range tests {
 		actual := findMedianSortedArrays(test.nums1, test.nums2)
 
@@ -28,7 +28,7 @@ func TestLongestSubstringWithoutRepeatingCharacters(t *testing.T) {
 	}
 }
 
-func BenchmarkLongestSubstringWithoutRepeatingCharacters(b *testing.B) {
+func BenchmarkTestFindMedianSortedArrays(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		findMedianSortedArrays(benchmark.nums1, benchmark.nums2)
 	}
