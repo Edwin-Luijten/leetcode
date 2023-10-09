@@ -2,13 +2,16 @@ build-parser:
 	go build -o benchmark-parser ./cmd/parser/bench_results_parser.go && \
 	chmod +x benchmark-parser
 
+test:
+	go test -v ./...
+
 bench:
 	go test -bench=. -benchmem ./... | gobenchdata --json bench.json \
 
 parse:
 	./benchmark-parser
 
-run: bench parse
+run: test bench parse
 
 # Generate a new package for a challenge
 safeName = $(shell echo $(challenge) | sed -r 's/ /_/g')

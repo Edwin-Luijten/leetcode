@@ -13,7 +13,7 @@ Solutions and Benchmarks
 > ```bash 
 > make build-parser
 > ```
-> Run benchmarks
+> Run benchmarks & tests
 > ```bash 
 > make run
 > ```
