@@ -10,6 +10,7 @@ parse:
 
 run: bench parse
 
+# Generate a new package for a challenge
 safeName = $(shell echo $(challenge) | sed -r 's/ /_/g')
 pkg = $(safeName)
 method = $(shell echo $(safeName) | sed -r 's/_([a-z])/\U\1/g')
