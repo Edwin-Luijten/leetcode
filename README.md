@@ -25,10 +25,12 @@ Solutions and Benchmarks
 
 
 
+
 ## Challenges
 
 [ADD TWO NUMBERS](#add_two_numbers)  
 [LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS](#longest_substring_without_repeating_characters)  
+[MEDIAN OF TWO SORTED ARRAYS](#median_of_two_sorted_arrays)  
 [TWO SUM](#two_sum)  
 
 
@@ -37,27 +39,37 @@ Solutions and Benchmarks
 
 ## [ADD TWO NUMBERS](./add_two_numbers)
 
-Runs: 7798587  
+Runs: 7446480  
 
 | Name | ns/op | B/op | allocs/op |  
 | ---- | ----- | ---- | --------- |  
-| BenchmarkAddTwoNumbers-2 | 151.500000 ns/op | 48.000000 B/op | 3.000000 allocs/op |  
+| BenchmarkAddTwoNumbers-2 | 168.100000 ns/op | 48.000000 B/op | 3.000000 allocs/op |  
 
 <a name="longest_substring_without_repeating_characters"></a>  
 
 ## [LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS](./longest_substring_without_repeating_characters)
 
-Runs: 29090780  
+Runs: 27547670  
 
 | Name | ns/op | B/op | allocs/op |  
 | ---- | ----- | ---- | --------- |  
-| BenchmarkLongestSubstringWithoutRepeatingCharacters-2 | 42.440000 ns/op | 0.000000 B/op | 0.000000 allocs/op |  
+| BenchmarkLongestSubstringWithoutRepeatingCharacters-2 | 44.990000 ns/op | 0.000000 B/op | 0.000000 allocs/op |  
+
+<a name="median_of_two_sorted_arrays"></a>  
+
+## [MEDIAN OF TWO SORTED ARRAYS](./median_of_two_sorted_arrays)
+
+Runs: 17022822  
+
+| Name | ns/op | B/op | allocs/op |  
+| ---- | ----- | ---- | --------- |  
+| BenchmarkTestFindMedianSortedArrays-2 | 69.060000 ns/op | 32.000000 B/op | 1.000000 allocs/op |  
 
 <a name="two_sum"></a>  
 
 ## [TWO SUM](./two_sum)
 
-Runs: 7277935  
+Runs: 6501814  
 
 | Name | ns/op | B/op | allocs/op |  
 | ---- | ----- | ---- | --------- |  
