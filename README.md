@@ -5,16 +5,22 @@ Solutions and Benchmarks
 
 ## Getting Started 
 
+> Install gobenchdata to parse benchmark results and create a bench.json
 > ```bash 
 > go install go.bobheadxi.dev/gobenchdata@latest
 > ```
+> Build parser
 > ```bash 
 > make build-parser
 > ```
+> Run benchmarks
 > ```bash 
 > make run
 > ```
-
+> Create a new challenge
+> ```bash
+> make new challenge="foo bar" 
+> ```
 
 
 

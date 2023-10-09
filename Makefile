@@ -9,3 +9,19 @@ parse:
 	./benchmark-parser
 
 run: bench parse
+
+safeName = $(shell echo $(challenge) | sed -r 's/ /_/g')
+pkg = $(safeName)
+method = $(shell echo $(safeName) | sed -r 's/_([a-z])/\U\1/g')
+methodPart = $(shell echo $(safeName) | sed -r 's/(^|_)([a-z])/\U\2/g')
+
+new:
+	mkdir -p ./$(safeName) && \
+	cp -r ./.templates/* ./$(safeName) && \
+	sed -i "s/challenge_pkg/${pkg}/g" ./$(safeName)/function.go
+	sed -i "s/challenge_pkg/${pkg}/g" ./$(safeName)/function_test.go
+	sed -i "s/\(challenge*\)/${method}/g" ./$(safeName)/function.go
+	sed -i "s/\(challenge*\)/${method}/g" ./$(safeName)/function_test.go
+	sed -i "s/\(Challenge*\)/${methodPart}/g" ./$(safeName)/function_test.go
+	mv ./$(safeName)/function.go ./$(safeName)/$(safeName).go
+	mv ./$(safeName)/function_test.go ./$(safeName)/$(safeName)_test.go
